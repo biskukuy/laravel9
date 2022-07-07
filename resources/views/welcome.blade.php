@@ -1,10 +1,16 @@
-@extends('layouts.app')
+{{-- @component('components.layout') --}}
+    
+<x-layouts.app
+    
+>
+    <x-slot name="title">
+        Home Title
+    </x-slot>
 
-@section('title','home')
-
-@section('meta-description','Home meta description')
-
-@section('content')
     <h1>Inicio  </h1>
-@endsection
+
+</x-layouts.app>
+    
+
+{{-- @endcomponent  --}}
     
