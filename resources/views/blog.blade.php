@@ -8,7 +8,7 @@
       {{-- @dump($posts) --}}
 
       @foreach ($posts as $item)
-        <h2> {{ $item['title']}}</h2>
+        <h2> {{ $item->title}}</h2>
       @endforeach
 
 

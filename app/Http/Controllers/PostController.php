@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -19,13 +20,8 @@ class PostController extends Controller
     */
     public function index()
     {
-        $posts = [
-            ['title' => 'Primero'],
-            ['title' => 'Segundo'],
-            ['title' => 'Tercero'],
-            ['title' => 'Cuarto'],
-        
-        ];
+        $posts = DB::table('posts')->get();
+
         return view('blog',['posts' => $posts]);
     }
 
