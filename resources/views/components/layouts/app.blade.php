@@ -11,15 +11,10 @@
 
 </head>
 <body>
-    {{-- @include('partials.navigation') --}}
-    
+   
  <x-layouts.navigation />
 
- <pre>
-    
- </pre>
     {{ $slot }}
-
     
 </body>
 </html>
