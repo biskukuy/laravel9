@@ -4,7 +4,10 @@
         @csrf
         <label> 
             Titulo<br>
-            <input type="text" name="title">
+            <input type="text" name="title" ><br>
+            @error('title')
+                <small style="color:red">{{ $message }}</small>
+            @enderror
         </label><br>
         <label> 
             Body<br>
