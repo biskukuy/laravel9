@@ -1,5 +1,6 @@
 <x-layouts.app title="Contacto" meta-description="Pagina de Blog">
       <h1>Blog</h1>
+      <a href="{{ route('posts.create') }}"> Crear nuevo Post</a>
       @foreach ($posts as $post)
         <h2>  
           <a href="{{ route('posts.show',$post->id) }}">{{ $post->title }}</a>
