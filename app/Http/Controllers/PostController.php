@@ -29,15 +29,30 @@ class PostController extends Controller
             'body'  => ['required'],
         ]);
         $post = new Post();
-        
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->save();
         session()->flash('status','Post Creado!!!');
 
         return to_route('posts.index');
+    }
+    public function edit(Post $post)
+    {
+        return view('posts.edit', ['post'=> $post]); 
+    }
+    public function update(Request $request)
+    {
+        $request->validate([
+            'title' => ['required', 'min:4'],
+            'body'  => ['required'],
+        ]);
+        $post = new Post();
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->save();
+        session()->flash('status','Post Creado!!!');
 
-   
+        return to_route('posts.index');
     }
 }
 
