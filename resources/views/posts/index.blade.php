@@ -9,5 +9,6 @@
         &nbsp;
         <a href="{{ route('posts.edit',$post) }}">Editar</a>
       </div>
+      
       @endforeach
 </x-layouts.app>

@@ -4,5 +4,8 @@
         <li><a href="{{ route('posts.index') }}">Blog</a></li>
         <li><a href="{{ route('about') }}">About</a></li>
         <li><a href="{{ route( 'contact') }}">Contacto</a></li>
+        <li><a href="{{ route( 'pagina') }}">Pagina</a></li>
+        <li><a href="{{ route( 'tareas.index') }}">Tareas</a></li>
+
     </ul>
 </nav>
