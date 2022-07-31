@@ -15,7 +15,7 @@
 @enderror
 </label><br>
 <div class="form-check">
-    <input type="checkbox" name="finalizada" class="form-check-input" id="InpurFinalizada" @checekd(old('finalizada'))>
+    <input type="checkbox" name="finalizada" class="form-check-input" id="InputFinalizada" @checked(old('finalizada'))>
     <label for="InputFinalizada" class="form-check-label">Finalizada</label>
 </div>
 <label> 

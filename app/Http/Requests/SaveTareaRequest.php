@@ -26,11 +26,11 @@ class SaveTareaRequest extends FormRequest
     {
   
         return [
-            'nombre' => ['required', 'min:10'],
+            'nombre' => ['required', 'min:4'],
             'descripcion'  => ['required'],
             'finalizada' => ['nullable'],
             'urgencia' => ['required'],
-            'fecha_limite' => ['required', 'date_format:Y-m-d\Th:i']
+            'fecha_limite' => ['required', 'date_format:Y-m-d\TH:i']
 
         ];
     }
