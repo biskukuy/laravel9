@@ -15,12 +15,12 @@
 @enderror
 </label><br>
 <div class="form-check">
-    <input type="checkbox" name="finalizada" class="form-check-input" id="InputFinalizada" @checked(old('finalizada'))>
+    <input type="checkbox" name="finalizada" class="form-check-input" id="InputFinalizada" @checked(old('finalizada', $tarea->finalizada))>
     <label for="InputFinalizada" class="form-check-label">Finalizada</label>
 </div>
 <label> 
     Fecha de Limite<br>
-    <input type="datetime-local" name="fecha_limite" value={{old('fecha_limite',$tarea->fecha_limite)}}>
+    <input type="datetime-local" name="fecha_limite" value={{old('fecha_limite',$tarea->fecha_limite->format('Y-m-d\TH:i'))}}>
 </label><br>
 <label> 
     Urgencia:<br>
@@ -30,7 +30,7 @@
         <option value=2>Muy Urgente</option>
     </select>
     <script> 
-        document.getElementById('SelectUrgencia').value = "{{ old('urgencia') }}";  
+        document.getElementById('SelectUrgencia').value = "{{ old('urgencia', $tarea->urgencia) }}";  
     </script> 
    
 </label><br>
