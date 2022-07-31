@@ -7,5 +7,13 @@
         <br>
     </form>
     <br>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        @foreach ($errors->all as $error )
+        <li> {{ $error }} </li>
+        @endforeach
+    </div>   
+        
+    @endif
    <a href ="{{ route('tareas.index') }}">Regresar</a>
 </x-layouts.app>

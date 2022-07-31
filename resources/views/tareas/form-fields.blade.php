@@ -14,6 +14,10 @@
     <small style="color:red">{{ $message }}</small>
 @enderror
 </label><br>
+<div class="form-check">
+    <input type="checkbox" name="finalizada" class="form-check-input" id="InpurFinalizada">
+    <label for="InputFinalizada" class="form-check-label">Finalizada</label>
+</div>
 <label> 
     Fecha de Limite<br>
     <input type="datetime-local" name="fecha_limite" value={{old('fecha_limite',$tarea->fecha_limite)}}>
