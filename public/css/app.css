@@ -1,0 +1,22 @@
+#etiqueta1{
+    font-size: 15px;
+    background-color: blue;
+    color: white;
+}
+
+
+.claseP{
+    background-color: aliceblue;
+    margin: 15px;
+}
+
+h1{
+    font-size: 40px;
+    background-color: rgb(7, 7, 243);
+    color: white;
+    margin: 10px;
+    text-align: center;
+}
+a over{
+    color:red;
+}
