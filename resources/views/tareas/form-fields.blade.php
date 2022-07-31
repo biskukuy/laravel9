@@ -15,7 +15,8 @@
 @enderror
 </label><br>
 <div class="form-check">
-    <input type="checkbox" name="finalizada" class="form-check-input" id="InputFinalizada" @checked(old('finalizada', $tarea->finalizada))>
+    <input type="checkbox" name="finalizada" class="form-check-input" id="InputFinalizada"
+     @checked(old('finalizada', $tarea->finalizada))>
     <label for="InputFinalizada" class="form-check-label">Finalizada</label>
 </div>
 <label> 
