@@ -26,7 +26,7 @@ class PostController extends Controller
     public function store(SavePostRequest $request)
     {
          Post::create($request->validated());
-      
+      //dd($request);
 
         return to_route('posts.index')->with('status','Post Creado!!!');
     }

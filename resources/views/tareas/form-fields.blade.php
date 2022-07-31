@@ -15,7 +15,7 @@
 @enderror
 </label><br>
 <div class="form-check">
-    <input type="checkbox" name="finalizada" class="form-check-input" id="InpurFinalizada">
+    <input type="checkbox" name="finalizada" class="form-check-input" id="InpurFinalizada" @checekd(old('finalizada'))>
     <label for="InputFinalizada" class="form-check-label">Finalizada</label>
 </div>
 <label> 
@@ -24,10 +24,13 @@
 </label><br>
 <label> 
     Urgencia:<br>
-    <select>
+    <select name="urgencia" id="SelectUrgencia" class="form-select">
         <option value=0 selected>No es Urgente</option>
         <option value=1>Urgencia Normal</option>
         <option value=2>Muy Urgente</option>
     </select>
+    <script> 
+        document.getElementById('SelectUrgencia').value = "{{ old('urgencia') }}";  
+    </script> 
    
 </label><br>
