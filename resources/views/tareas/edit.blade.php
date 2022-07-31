@@ -1,6 +1,6 @@
-<x-layouts.app :title="$post->title" :meta-description="$post->body">
+<x-layouts.app :title="$tarea->nombre">
     <h1>Formulario de Edicion</h1>
-    <form method="POST" action="{{route('tareas.update',$post)}}">
+    <form method="POST" action="{{route('tareas.update',$tarea)}}">
         @csrf
         @method('PATCH')
         @include('tareas.form-fields')

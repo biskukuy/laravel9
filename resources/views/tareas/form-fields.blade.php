@@ -1,6 +1,6 @@
 <label> 
     Nombre de la Tarea<br>
-    <input type="text" name="nombre" value={{old('title',$tarea->nombre)}}>
+    <input type="text" name="nombre" value={{old('nombre',$tarea->nombre)}}>
     @error('nombre')
         <br>
         <small style="color:red">{{ $message }}</small>
@@ -16,11 +16,7 @@
 </label><br>
 <label> 
     Fecha de Limite<br>
-    <input type="date" name="fecha_limite" value={{old('fecha_limite',$tarea->fecha_limite)}}>
-    @error('nombre')
-        <br>
-        <small style="color:red">{{ $message }}</small>
-    @enderror
+    <input type="datetime-local" name="fecha_limite" value={{old('fecha_limite',$tarea->fecha_limite)}}>
 </label><br>
 <label> 
     Urgencia:<br>
@@ -28,9 +24,6 @@
         <option value=0 selected>No es Urgente</option>
         <option value=1>Urgencia Normal</option>
         <option value=2>Muy Urgente</option>
-    <input type="date" name="fecha_limite" value={{old('fecha_limite',$tarea->fecha_limite)}}>
-    @error('nombre')
-        <br>
-        <small style="color:red">{{ $message }}</small>
-    @enderror
+    </select>
+   
 </label><br>

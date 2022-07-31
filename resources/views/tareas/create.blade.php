@@ -1,5 +1,5 @@
-<x-layouts.app title="Crear nueva tarea" meta-description="Formulario para crear un nueva TArea">
-    <h1>Crear nuevo Post</h1>
+<x-layouts.app title="Crear nueva tarea">
+    <h1>Crear nueva Tarea</h1>
     <form method="POST" action="{{ route('tareas.store')}}">
         @csrf
         @include('tareas.form-fields')

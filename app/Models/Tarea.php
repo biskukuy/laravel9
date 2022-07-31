@@ -9,12 +9,6 @@ class Tarea extends Model
 {
     use HasFactory;
    
-    protected $fillable = [
-      'nombre'  ,
-      'descripcion',
-      'finalizada',
-      'fecha_limite',
-      'urgencia'
-    ];
+    protected $guarded = [];
     protected $dates = ['fecha_limite']; 
 }

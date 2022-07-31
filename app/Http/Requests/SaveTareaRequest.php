@@ -17,6 +17,7 @@ class SaveTareaRequest extends FormRequest
     }
 
     /**
+
      * Get the validation rules that apply to the request.
      *
      * @return array<string, mixed>
@@ -27,6 +28,10 @@ class SaveTareaRequest extends FormRequest
         return [
             'nombre' => ['required', 'min:10'],
             'descripcion'  => ['required'],
+            'finalizada' => ['nullable'],
+            'urgencia' => ['required'],
+            'fecha_limite' => ['required', 'date_format:Y-m-d\Th:i']
+
         ];
     }
 }

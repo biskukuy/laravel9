@@ -27,13 +27,13 @@ Route::view('pagina', 'pagina')->name('pagina');
 
 Route::get('tarea', [TareaController::class,'index'] )->name('tareas.index');
 
-Route::get('tarea/create', [PostController::class,'create'] )->name('tareas.create');
+Route::get('tarea/create', [TareaController::class,'create'] )->name('tareas.create');
 
-Route::post('tarea', [PostController::class,'store'] )->name('tareas.store');
+Route::post('tarea', [TareaController::class,'store'] )->name('tareas.store');
 
-Route::get('tarea/{post}', [PostController::class,'show'] )->name('tareas.show');
+Route::get('tarea/{tarea}', [TareaController::class,'show'] )->name('tareas.show');
 
-Route::get('tarea/{post}/edit', [PostController::class,'edit'] )->name('tareas.edit');
+Route::get('tarea/{tarea}/edit', [TareaController::class,'edit'] )->name('tareas.edit');
 
-Route::patch('tarea/{post}', [PostController::class,'update'] )->name('tareas.update');
+Route::patch('tarea/{tarea}', [TareaController::class,'update'] )->name('tareas.update');
 
