@@ -4,12 +4,21 @@
     
     <div class="card text-center">
         <div class="card-header">
-            Featured
+            Pagina de Ejemplo
         </div>
         <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
+            <h5 class="card-title">Ejemplos de Card</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+           
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Button with data-bs-target
+              </button>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
         </div>
         <div class="card-footer text-muted">
             2 days ago
@@ -66,6 +75,18 @@
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+              Toggle width collapse
+            </button>
+          </p>
+          <div style="min-height: 120px;">
+            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+              <div class="card card-body" style="width: 300px;">
+                This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
