@@ -4,11 +4,11 @@
         @csrf
         @method('PATCH')
         @include('tareas.form-fields')
-        <button type="submit">Enviar</button>
-        <br>
+        <div class="container">
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Procesar</button>
+                <a class="btn btn-success" href ="{{route('tareas.index')}}">Regresar</a>
+            </div>
+        </div>
     </form>
-    
-  
-
-    <a href ="{{route('tareas.index')}}">Regresar</a>
 </x-layouts.app>
