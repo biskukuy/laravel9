@@ -14,10 +14,9 @@
     <small style="color:red">{{ $message }}</small>
 @enderror
 </label><br>
-<div class="form-check">
-    <input type="checkbox" name="finalizada" class="form-check-input" id="InputFinalizada"
-     @checked(old('finalizada', $tarea->finalizada))>
-    <label for="InputFinalizada" class="form-check-label">Finalizada</label>
+<div class="form-check form-switch">
+    <input class="form-check-input" id="InputFinalizada" type="checkbox" role="switch" @checked(old('finalizada', $tarea->finalizada)) >
+    <label class="form-check-label" for="InputFinalizada">Finalizada</label>
 </div>
 <label> 
     Fecha de Limite<br>
