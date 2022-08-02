@@ -1,11 +1,15 @@
-<label> 
-    Titulo<br>
-    <input type="text" name="title" value={{old('title',$post->title)}}>
-    @error('title')
+<div class="container">
+    <div class="mb-3">
+        <label for="InputNombre" class="form-label">Titulo</label>
+        <input type="text" class="form-control" id="InputNombre" aria-describedby="nombreHelp" name="title" value={{old('title',$post->title)}}>
+        <div id="nombreHelp" class="form-text">Debes colocar un Titulo</div>
+        @error('title')
         <br>
         <small style="color:red">{{ $message }}</small>
     @enderror
-</label><br>
+    </div>
+</div>
+
 <label> 
     Body<br>
     <textarea name="body">{{old('body',$post->body)}}</textarea>
