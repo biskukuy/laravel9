@@ -16,7 +16,7 @@
         </div>
         <div class="mb-3 form-check form-switch">
             <input class="form-check-input" id="InputFinalizada" type="checkbox" role="switch" @checked(old('finalizada', $tarea->finalizada)) >
-            <label class="form-check-label" for="InputFinalizada">Finalizada</label>
+            <label class="form-check-label" for="InputFinalizada">FINALIZADA</label>
             
         </div>
         <div class="mb-3 ">
