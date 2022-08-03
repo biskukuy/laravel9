@@ -17,6 +17,8 @@ class Tarea extends Model
         return self::URGENCIAS[ $this->urgencia];
     }
     public function finalizada(){
-        return $this->finalizada == 1 ? 'Si':'No';
+    
+            return $this->finalizada == 1 ? 'Si':'No';
+            
     }
 }
