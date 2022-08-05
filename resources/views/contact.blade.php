@@ -1,10 +1,10 @@
 <x-layouts.app title="Contacto" meta-description="Pagina de Contacto">
-      <h1>Contacto</h1>
+      <h1>Contacto 1</h1>
       <form>
       
       <div class="container">
             <div class="row">
-                  <div class="card border-success mb-3" style="max-width: 18rem;">
+                  <div class="card border-success" style="max-width: 18rem;">
                         <div class="card-header">Registro</div>
                         <div class="card-body text-success">
                           <h5 class="card-title">Formulario de Contacto</h5>
@@ -22,13 +22,6 @@
                           </div>
                         </div>
                         </div>
-                      </div>
-                     
-                  
-                      <div class="mb-3">
-                        
-                      </div>
-                      <div class="col-auto">
                       </div>
             </div>
       </div>
