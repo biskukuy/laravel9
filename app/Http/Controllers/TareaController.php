@@ -22,22 +22,21 @@ class TareaController extends Controller
     }
     public function create()
     {
-        return view('tareas.create',['tarea'=> new Tarea]); 
+        
+        
+        return view('tareas.create'); 
     }
-    public function store(SaveTareaRequest $request)
+    public function store(Request $request)
     {
 
-            Tarea::create($request->validated());
-          //  dd($request);
-      
-           
-       return to_route('tareas.index')->with('status','tarea Creado!!!');
+        dd($request);
+          //    return to_route('tareas.index')->with('status','tarea Creado!!!');
     }
     public function edit(Tarea $tarea)
     {
         return view('tareas.edit',['tarea'=> $tarea]); 
     }
-    public function update(SaveTareaRequest $request, Tarea $tarea)
+    public function update(Request $requesT)
     {
         $tarea->update($request->validated());
        

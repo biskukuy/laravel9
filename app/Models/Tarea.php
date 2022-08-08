@@ -23,7 +23,7 @@ class Tarea extends Model
     public const URGENCIAS = ['Baja', 'Normal', 'Alta'];
 
     public function urgencia(){
-        return self::URGENCIAS[ $this->urgencia];
+        return self::URGENCIAS[ $this->urgencia ];
     }
     public function estaFinalizada(){
     

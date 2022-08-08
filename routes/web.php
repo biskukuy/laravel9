@@ -29,7 +29,7 @@ Route::get('tarea', [TareaController::class,'index'] )->name('tareas.index');
 
 Route::get('tarea/create', [TareaController::class,'create'] )->name('tareas.create');
 
-Route::post('tarea', [TareaController::class,'store'] )->name('tareas.store');
+Route::post('tarea/guardar', [TareaController::class,'store'] )->name('tareas.store');
 
 Route::get('tarea/{tarea}', [TareaController::class,'show'] )->name('tareas.show');
 
