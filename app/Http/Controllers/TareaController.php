@@ -28,8 +28,16 @@ class TareaController extends Controller
     }
     public function store(Request $request)
     {
+      
+        $datos = $request->validate(
+            [
+            'nombre'        => 'required|max:60',
+            'descripcion'   => 'nullable|max:255',
+            'urgencia'      => 'required|numeric|min:0|max:2',
+            'fecha_limite'  => 'required|date_format:Y-m_d\Th:i'
+        ]);
 
-        dd($request);
+        dd($datos);
           //    return to_route('tareas.index')->with('status','tarea Creado!!!');
     }
     public function edit(Tarea $tarea)
@@ -38,9 +46,9 @@ class TareaController extends Controller
     }
     public function update(Request $requesT)
     {
-        $tarea->update($request->validated());
+      //  $tarea->update($request->validated());
        
 
-        return to_route('tareas.show',$tarea)->with('status','tarea Actualizado!!!');
+        //return to_route('tareas.show',$tarea)->with('status','tarea Actualizado!!!');
     }
 }
