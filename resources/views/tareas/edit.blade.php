@@ -3,7 +3,9 @@
     <form method="POST" action="{{route('tareas.update',$tarea)}}">
         @csrf
         @method('PATCH')
-        @include('tareas.form-fields')
+        <x-tarea-form-body :tarea="$tarea" />
+        
+     
         <div class="container">
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary">Procesar</button>

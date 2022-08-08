@@ -16,8 +16,8 @@
       @foreach ($tareas as $tarea)
       <tr class="table-light">
         <td>{{ $tarea->nombre }}</td>
-        <td>{{ $tarea->finalizada() }}</td>
-        <td>{{ $tarea->fecha_limite->format('H:i  d/m/Y') }}</td>
+        <td>{{ $tarea->estaFinalizada() }}</td>
+        <td>{{ $tarea->fecha_limite->format('H:i  d / m / Y') }}</td>
         <td>{{ $tarea->urgencia() }}</td>
         <td>{{ $tarea->descripcion }}</td>
         <td>
