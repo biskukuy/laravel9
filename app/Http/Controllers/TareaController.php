@@ -6,7 +6,6 @@ use App\Models\Tarea;
 use Illuminate\Http\Request;
 use App\Http\Requests\SaveTareaRequest;
 
-
 class TareaController extends Controller
 {
    
@@ -15,15 +14,12 @@ class TareaController extends Controller
         $tareas = Tarea::orderByDesc('id')->get();
         return view('tareas.index',['tareas' => $tareas]);
     }
-
     public function show(Tarea $tarea)
     {
         return view('tareas.show',['tarea'=> $tarea]); 
     }
     public function create()
     {
-        
-        
         return view('tareas.create'); 
     }
     public function store(Request $request)
@@ -52,8 +48,6 @@ class TareaController extends Controller
     public function update(Request $requesT)
     {
       //  $tarea->update($request->validated());
-       
-
         //return to_route('tareas.show',$tarea)->with('status','tarea Actualizado!!!');
     }
 }
