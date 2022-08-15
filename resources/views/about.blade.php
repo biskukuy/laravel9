@@ -47,7 +47,7 @@ class Tarea extends Model
         </div>
         <div class="col-md-4">
           <h3>Vista: Index.tarea</h3>
-          <p><small>
+          <p id="etiqueta1"><small>
             <pre>
             <code>
 &lt;x-layouts.app title="Tareas" &gt;
@@ -69,11 +69,11 @@ class Tarea extends Model
 &lt;/x-layouts.app&gt;
 @ foreach ($tareas as $tarea) 
 &lt;tr class="table-light"&gt;
-  &lt;td&gt;{ $ tarea-&gt;nombre }}&lt;/td&gt;
-  &lt;td&gt;{ $ tarea-&gt;estaFinalizada() }}&lt;/td&gt;
-  &lt;td&gt;{ $ tarea-&gt;fecha_limite-&gt;format('H:i  d / m / Y') }}&lt;/td&gt;
-  &lt;td&gt;{ $ tarea-&gt;urgencia() }}&lt;/td&gt;
-  &lt;td&gt;{ $ tarea-&gt;descripcion }}&lt;/td&gt;
+  &lt;td&gt;{ $tarea-&gt;nombre }}&lt;/td&gt;
+  &lt;td&gt;{ $tarea-&gt;estaFinalizada() }}&lt;/td&gt;
+  &lt;td&gt;{ $tarea-&gt;fecha_limite-&gt;format('H:i  d / m / Y') }}&lt;/td&gt;
+  &lt;td&gt;{ $tarea-&gt;urgencia() }}&lt;/td&gt;
+  &lt;td&gt;{ $tarea-&gt;descripcion }}&lt;/td&gt;
   &lt;td&gt;
   &lt;a href="{ route('tareas.edit',$ tarea) }}"&gt;Editar&lt;/a&gt;
   &lt;/td&gt;
@@ -87,7 +87,7 @@ class Tarea extends Model
         </div>
         <div class="col-md-4">
           <h3>Controlador: Tarea</h3>
-          <p class="claseP">
+          <p id="etiqueta1">
             <small>
               <pre>
                 <code>
