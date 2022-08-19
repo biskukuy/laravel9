@@ -31,9 +31,9 @@ Route::get('tarea/create', [TareaController::class,'create'] )->name('tareas.cre
 
 Route::post('tarea/guardar', [TareaController::class,'store'] )->name('tareas.store');
 
+Route::patch('tarea/{tarea}', [TareaController::class,'update'] )->name('tareas.update');
 Route::get('tarea/{tarea}', [TareaController::class,'show'] )->name('tareas.show');
 
 Route::get('tarea/{tarea}/edit', [TareaController::class,'edit'] )->name('tareas.edit');
 
-Route::patch('tarea/{tarea}', [TareaController::class,'update'] )->name('tareas.update');
 
